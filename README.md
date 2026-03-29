@@ -49,31 +49,31 @@ The trained model is deployed and ready to use!
 
 ### **Base URL**
 ```
-https://student-exam-predictor-v1.onrender.com
+https://linearregressionmodel-production-b605.up.railway.app/
 ```
 
 ### **Interactive API Documentation**
 ```
-https://student-exam-predictor-v1.onrender.com/docs
+https://linearregressionmodel-production-b605.up.railway.app/docs
 ```
 
 ### **API Endpoints**
 
 #### 1. Health Check
 ```bash
-GET https://student-exam-predictor-v1.onrender.com/
+https://linearregressionmodel-production-b605.up.railway.app/docs#/Health/root__get
 ```
 **Response:**
 ```json
 {
   "status": "ok",
-  "message": "Student Exam Score Prediction API is running. Visit http://127.0.0.1:8000/docs for Swagger UI."
+  "message": "Student Exam Score Prediction API is running."
 }
 ```
 
 #### 2. Make a Prediction
 ```bash
-POST https://student-exam-predictor-v1.onrender.com/predict
+POST https://linearregressionmodel-production-b605.up.railway.app/predict
 Content-Type: application/json
 ```
 
@@ -111,7 +111,7 @@ Content-Type: application/json
 
 #### 3. Retrain Model (Upload New Data)
 ```bash
-POST https://student-exam-predictor-v1.onrender.com/retrain
+POST https://linearregressionmodel-production-b605.up.railway.app/retrain
 Content-Type: multipart/form-data
 ```
 
@@ -157,27 +157,26 @@ linear_regression_model/
 │
 ├── summative/
 │   ├── linear_regression/
-│   │   └── Multivariate.ipynb          # Model training notebook
+│   │   └── Multivariate.ipynb
 │   │
 │   ├── API/
-│   │   ├── prediction.py               # FastAPI server
-│   │   ├── requirements.txt            # Python dependencies
-│   │   ├── best_model.pkl              # Trained Linear Regression model
-│   │   ├── scaler.pkl                  # StandardScaler for data normalization
-│   │   ├── StudentPerformanceFactors.csv # Training dataset
-│   │   └── .python-version             # Python 3.11.9 specification
+│   │   ├── prediction.py
+│   │   ├── requirements.txt
+│   │   ├── best_model.pkl
+│   │   ├── scaler.pkl
+│   │   ├── StudentPerformanceFactors.csv
+│   │   └── .python-version
 │   │
-│   └── flutter_app/                    # Complete Flutter app
-│       ├── lib/main.dart               # Main Flutter application
-│       ├── pubspec.yaml                # Flutter dependencies
-│       ├── android/                    # Android-specific code
-│       └── ios/                        # iOS-specific code
+│   └── flutter_app/
+│       ├── lib/main.dart
+│       ├── pubspec.yaml
+│       ├── android/
+│       └── ios/
 │
-├── README.md                           # This file
-├── runtime.txt                         # Python version for Render
-├── build.sh                            # Render build script
-└── .git/                               # Git repository
-
+├── README.md
+├── runtime.txt
+├── build.sh
+└── .git/
 ```
 
 ---
@@ -186,26 +185,26 @@ linear_regression_model/
 
 ### **Backend**
 - Python 3.11.9
-- FastAPI - Modern web framework
-- scikit-learn - Machine learning library
-- pandas - Data processing
-- numpy - Numerical computing
-- joblib - Model serialization
-- uvicorn - ASGI server
+- FastAPI
+- scikit-learn
+- pandas
+- numpy
+- joblib
+- uvicorn
 
 ### **Frontend**
-- Flutter/Dart - Cross-platform mobile framework
-- HTTP - API communication
+- Flutter/Dart
+- HTTP
 
 ### **Deployment & DevOps**
-- Render - Cloud platform for backend
-- GitHub - Version control
-- Docker - Containerization (Render)
+- Railway
+- GitHub
+- Docker
 
 ### **Data Science**
-- Jupyter Notebook - Model development
-- StandardScaler - Feature normalization
-- Linear Regression - Prediction model
+- Jupyter Notebook
+- StandardScaler
+- Linear Regression
 
 ---
 
@@ -254,7 +253,7 @@ Predicted Score = β₀ + β₁(Hour_Studied) + β₂(Attendance) + ... + β₁�
 - ✅ CORS enabled for mobile app
 - ✅ Model serialization with joblib
 - ✅ Error handling and logging
-- ✅ Deployed on Render with Python 3.11.9
+- ✅ Deployed on Railway with Python 3.11.9
 
 ### **Mobile App (Flutter)**
 - ✅ HTTP package for API calls
@@ -265,7 +264,7 @@ Predicted Score = β₀ + β₁(Hour_Studied) + β₂(Attendance) + ... + β₁�
 
 ### **DevOps**
 - ✅ runtime.txt for Python version
-- ✅ build.sh for Render deployment
+- ✅ build.sh for deployment
 - ✅ requirements.txt with dependencies
 - ✅ All files pushed to GitHub
 
@@ -273,12 +272,12 @@ Predicted Score = β₀ + β₁(Hour_Studied) + β₂(Attendance) + ... + β₁�
 
 ## 🚀 Deployment Steps (Already Complete)
 
-### **API Deployment on Render:**
+### **API Deployment on Railway:**
 1. ✅ Repository pushed to GitHub
-2. ✅ Python 3.11.9 runtime configured
-3. ✅ Dependencies specified in requirements.txt
-4. ✅ Build script (build.sh) created
-5. ✅ Service deployed at https://student-exam-predictor-v1.onrender.com
+2. ✅ Connected project to Railway
+3. ✅ Python 3.11.9 runtime configured
+4. ✅ Dependencies specified in requirements.txt
+5. ✅ Service deployed at https://linearregressionmodel-production-b605.up.railway.app
 
 ### **Flutter App:**
 1. ✅ Project created and configured
@@ -291,8 +290,8 @@ Predicted Score = β₀ + β₁(Hour_Studied) + β₂(Attendance) + ... + β₁�
 ## 📞 Support & Troubleshooting
 
 ### **API Not Responding?**
-- Check API status: https://student-exam-predictor-v1.onrender.com
-- View Render logs for errors
+- Check API status: https://linearregressionmodel-production-b605.up.railway.app
+- View Railway logs for errors
 
 ### **Flutter App Won't Connect?**
 - Verify internet connection
@@ -317,10 +316,10 @@ This project is open source and available under the MIT License.
 
 ## 🔗 Links
 - **GitHub Repo**: https://github.com/amaliza-shal/linear_regression_model
-- **Live API**: https://student-exam-predictor-v1.onrender.com/docs
+- **Live API**: https://linearregressionmodel-production-b605.up.railway.app/docs
 - **Dataset**: https://www.kaggle.com/datasets/lainguyn123/student-performance-factors
 
 ---
 
-**Last Updated:** March 27, 2026  
-**Status:** ✅ Production Ready
+**Last Updated:** March 29, 2026  
+**Status:** ✅ Production Ready 🚀
